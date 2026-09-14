@@ -1,103 +1,80 @@
-# 关于本组织
+# SnishaperTeam
 
-本组织由 **JetCPP Studio** 与 **SniShaper Development Team** 联合组建，致力于系统软件、网络协议栈、工具链及跨平台应用的前沿研究与工程实践。双方在各自领域拥有深厚的技术积累，通过资源共享与协同开发，共同推动高质量开源项目的建设与迭代。
+Building comprehensive, freely combinable software for flexible network traffic manipulation.
 
-官方网站：[https://jetcpp.ccwu.cc/](https://jetcpp.ccwu.cc/)
-
----
-
-## 组织成员与核心项目
-
-### dongzheyu
-
-系统软件与工具链开发者，JetCPP Studio 技术负责人，长期从事编译器工具链、桌面应用框架及 Web 全栈开发，擅长将复杂需求转化为高可用性的工程产品。
-
-#### dongzheyu.github.io
-
-个人作品集与技术博客平台，同时集成心理健康测评工具，采用终端风格用户界面设计，兼顾极客审美与实用功能。项目基于 Vue 3 + TypeScript 构建前端，利用 Pinia 进行状态管理，Vite 提供高速构建能力。后端服务依托 Supabase 实现用户认证、数据持久化与实时同步，保障测评结果的隐私与安全。
-
-该平台支持 Markdown 格式的文章渲染，内置文章分类、标签检索及全文搜索功能，方便技术内容的整理与分享。心理健康测评模块收录了 20 余种经过临床验证的自评量表，包括 PHQ-9（抑郁筛查）、GAD-7（广泛性焦虑）、MBTI 职业性格测试等。测评流程采用自适应算法，根据用户作答动态调整题目顺序，提升评估效率。所有测评结果均以可视化图表呈现，并支持历史记录追踪，便于用户长期观察心理状态变化。项目代码严格遵循 ESLint + Prettier 规范，并配置了 GitHub Actions 自动化部署至 GitHub Pages，确保持续交付的稳定性。
-
-#### English-Listen-WinUI
-
-一款基于 Windows App SDK（WinUI 3）原生框架开发的英语听写训练工具，旨在提供流畅、沉浸式的语言学习体验。该项目最初采用 Qt6 实现，后为深度适配 Windows 11 现代交互规范，迁移至 WinUI 3 并充分利用 Fluent Design System，支持动态颜色主题（深色/浅色模式自动切换）、圆角动画及触摸友好布局。
-
-软件核心功能包含：智能词库管理系统，支持导入外部词表（CSV/JSON 格式）及按难度分级；个性化听写训练控制，可调节语速、间隔时长、重复次数，并支持随机出题与错题重练；基于 Windows SAPI 的 TTS 语音合成，提供多种发音人选择（美式/英式）。学习进度追踪模块采用 SQLite 本地数据库存储用户历史成绩、错误单词频次及学习时长，并借助 LiveCharts2 生成学习曲线与薄弱环节分布图，帮助学习者针对性强化。项目采用 MVVM 架构，实现界面与业务逻辑的松耦合，单元测试覆盖率达 85% 以上。安装包通过 MSIX 打包，支持一键部署与自动更新。
-
-### SniShaper Development Team
-
-网络协议栈技术创新团队，专注于复杂网络环境下的传输优化、代理协议适配及移动端接入方案，成员拥有多年在 GFW 对抗性场景中的工程经验，对 TLS/QUIC/HTTP/2 等协议有深入研究。
-
-#### SniShaper
-
-专为高干扰网络环境设计的本地代理软件，通过多维度协议栈改造实现稳定、低延迟的访问体验。项目采用 Go 语言编写，充分利用其并发模型与跨平台编译能力，支持 Windows 与 Linux 桌面平台，并提供统一的 CLI 终端版本（涵盖 Windows / Linux / macOS），内置 TUI 分屏界面，保留全部核心代理配置能力。
-
-核心技术特性包括：ECH（Encrypted ClientHello）注入，隐藏 SNI 信息以规避深度包检测；TLS 分片技术，将握手消息拆分为多个片段发送，降低被识别为代理流量的概率；QUIC 协议转换，将 TCP 流量封装于 QUIC 之上，利用其 0-RTT 握手与连接迁移特性提升抗丢包能力；会话迁移机制，在网络切换时自动维持已有连接，避免中断。软件通过 TUN 虚拟网卡接管系统全局流量，支持自定义路由表及分流规则，可与 Clash 等配置格式兼容。性能方面，采用零拷贝技术与内存池优化，在千兆带宽下 CPU 占用率低于 15%。项目持续集成使用 GitHub Actions，提供每周夜间构建版本，并配有详尽的命令行手册与配置样例。
-
-#### lumine-for-Android
-
-基于 enimul 核心在 Android 平台实现的 Clash 风格代理客户端，旨在将桌面级代理能力移植至移动端，满足 Android 用户对灵活路由与协议定制的需求。项目以 Kotlin 为主开发语言，结合 gomobile 将 Go 编写的核心代理引擎编译为 Android 可调用的 AAR 库，既保留了 Go 的高性能网络处理能力，又充分利用 Android 原生 UI 组件（Jetpack Compose 构建界面）。
-
-主要功能模块包括：VPN/TUN 管道，通过 Android VpnService 创建虚拟网卡，实现全局或按应用代理；Clash 风格配置管理，支持 YAML 格式的订阅链接导入，兼容主流机场订阅格式；基于 GFWList 的黑名单路由与 Fake IP 模式，有效减少 DNS 污染并加速国内站点直连；流量统计与实时日志查看，方便调试与监控。软件采用协程（Coroutines）处理异步任务，确保界面流畅；数据存储使用 Room 数据库，缓存规则集与配置历史。项目提供详细的快速上手指南，并内置常见问题解答，降低新手使用门槛。
+SnishaperTeam is a development organization focused on creating tools that enable users to navigate and operate within complex network environments. Our flagship project, SniShaper, provides multiple methods for bypassing SNI-based blocking, designed for reliability and composability.
 
 ---
 
-## 技术栈全景
+## Core Members
 
-本组织在多个技术维度保持深度积累，具体包括：
-
-- **系统编程语言**：C++（C++17/20 标准）、Rust（用于性能敏感模块）、Go（网络服务与并发处理）、WebAssembly（用于浏览器端协议模拟）。
-- **桌面应用框架**：WinUI 3（Windows 原生）、Qt（跨平台 C++）、GTK（Linux 桌面候选方案）。
-- **移动开发**：Kotlin（Android 原生）、gomobile（Go 与 Android 互操作）、Jetpack Compose（声明式 UI）。
-- **前端与 Web 基础设施**：Vue 3（组合式 API）、TypeScript（类型安全）、VitePress（文档生成）、Node.js（构建工具链）、Webpack（传统模块打包）。
-- **网络协议与代理**：TLS 1.3、QUIC、HTTP/2、SOCKS5、VMess、Trojan 等；自定义协议设计及 Socket 编程框架。
-- **性能优化与分析**：pprof 性能剖析、SIMD 指令集加速、缓存友好数据结构设计、内存池管理。
-- **持续集成与部署**：GitHub Actions（自动化测试、构建、发布）、Docker 容器化（用于服务端组件）。
-- **数据库与存储**：SQLite（本地轻量存储）、Supabase（云端 PostgreSQL + 实时订阅）、Room（Android ORM）。
-
-各项目均依据自身需求灵活组合上述技术，并保持统一编码风格与文档规范。
+| Member | Role |
+|--------|------|
+| [dongzheyu](https://github.com/dongzheyu) (dongle / JetCPPTeam) | Lead developer, core maintainer |
+| [Snishaper](https://github.com/Snishaper) | Developer, continuing updates after the departure of the original author |
 
 ---
 
-## 开发与协作规范
+## Projects
 
-为保障代码质量与团队协作效率，本组织制定并严格执行以下标准：
+### SniShaper
 
-- **代码审查**：所有合并请求必须至少获得一名核心维护者的批准，审查重点涵盖逻辑正确性、性能影响、安全风险及测试覆盖。
-- **持续集成**：每次提交触发自动化流水线，包括静态代码检查（golangci-lint、ESLint、cppcheck）、单元测试（go test、JUnit、pytest）及构建验证。测试覆盖率要求不低于 70%。
-- **文档标准**：每个仓库必须包含 README.md（项目概述、安装步骤、快速使用）、CONTRIBUTING.md（贡献指南）、CHANGELOG.md（版本变更记录）。API 接口及内部模块需有代码注释生成文档。
-- **版本管理**：遵循语义化版本 2.0.0，主版本号变更表示不兼容的 API 修改，次版本号增加表示向下兼容的新功能，修订号用于问题修复。使用 Git Flow 分支模型，主分支保持稳定，开发分支集成最新特性。
-- **测试策略**：单元测试覆盖核心逻辑；集成测试针对网络代理类项目需搭建模拟环境（如使用 docker-compose 模拟 DNS 与代理服务）；UI 项目采用自动化截图回归测试（Playwright 或 Appium）。
+A desktop application supporting multiple methods to bypass SNI blocking, designed for complex network environments. The primary project of SnishaperTeam, with 145 stars and active development.
 
----
+**Latest release:** v1.28
 
-## 社区参与与贡献指南
+| Repository | Description |
+|------------|-------------|
+| [SniShaper](https://github.com/SnishaperTeam/SniShaper) | Main application (Go) |
+| [SniShaper-Fast](https://github.com/SnishaperTeam/SniShaper-Fast) | Lightweight proxy tool with passthrough, domain fronting, ECH, TLS fragmentation, QUIC direct, and dynamic reverse relay (Go) |
+| [SniShaperWeb](https://github.com/dongzheyu/SniShaperWeb) | Official project website (TypeScript) |
 
-我们欢迎开发者以多种形式参与组织建设：
+### lumine
 
-- **问题报告**：请在对应仓库的 Issues 区提交 bug 或功能建议，遵循提供的模板填写环境信息、复现步骤及期望行为。
-- **代码贡献**：请先阅读 CONTRIBUTING.md，了解开发环境配置、代码风格及提交流程。我们鼓励先通过 Issue 讨论设计方案，再提交 Pull Request，以减少返工。
-- **文档改进**：发现文档错误或不清晰之处，欢迎直接编辑相应 Markdown 文件并提交 PR。
-- **技术讨论**：项目相关的设计决策、协议选型等可在 Discussion 板块发起，核心成员会及时回应。
-- **社区行为准则**：我们遵循 Contributor Covenant 2.1，承诺营造开放、包容、尊重的协作氛围。
+Clash-style network proxy implementations across platforms.
 
----
+| Repository | Platform | Language | Stars | Description |
+|------------|----------|----------|-------|-------------|
+| [lumine-for-harmonyos](https://github.com/SnishaperTeam/lumine-for-harmonyos) | HarmonyOS | C++ | 1 | Clash-style implementation of lumine on HarmonyOS |
+| [lumine-for-android](https://github.com/Snishaper/lumine-for-android) | Android | Go | 60 | Clash-style implementation of lumine on Android |
 
-## 未来规划与愿景
+**Latest release (Android):** v0.9.1
 
-- **工具链深化**：持续完善 Minecraft 相关工具生态，推出跨平台统一管理面板；扩展英语学习工具至移动端，增加智能听写评分与发音纠错功能。
-- **网络协议创新**：探索下一代代理协议（如 WireGuard 隧道集成、多路径传输），提升抗干扰能力；将 SniShaper 的 TUN 模块独立为通用库，供其他项目复用。
-- **自动化与 DevOps**：构建统一的构建发布平台，实现一键生成各平台安装包；引入更多性能基准测试，自动化比对每次迭代的吞吐量与延迟变化。
-- **教育推广**：通过技术博客、线上分享会及工作坊，向初开发者普及编译原理、网络协议等基础知识，降低参与开源的门槛。
+### Related Tools
 
----
-
-## 联系与交流
-
-- 官方网站：[https://jetcpp.ccwu.cc/](https://jetcpp.ccwu.cc/)
-- 各项目具体问题请直接于对应 GitHub 仓库提交 Issue。
-- 合作洽谈、媒体咨询或技术交流，请通过官网联系表单或邮件（[youmao2023@outlook.com](mailto:youmao2023@outlook.com)）与我们取得联系，我们将在 3 个工作日内回复。
+| Repository | Language | Stars | Description |
+|------------|----------|-------|-------------|
+| [sniproxy-tls-rf](https://github.com/Snishaper/sniproxy-tls-rf) | Go | 3 | Simple implementation for SniShaper tls-rf mode custom upstream |
+| [blindtls-vercel](https://github.com/Snishaper/blindtls-vercel) | Go | -- | BlindTLS server implementation on Vercel |
 
 ---
 
-*本组织所有项目均基于开源许可协议发布，我们坚持透明、协作、卓越的工程理念，期待与你共同构建更强大的技术生态。*
+## Contribution Overview
+
+Key contribution statistics across the organization's repositories:
+
+| Repository | dongzheyu | Snishaper | Other contributors |
+|------------|-----------|-----------|-------------------|
+| SniShaper | 194 commits | 37 commits | lzpls, Calvin1-tech |
+| SniShaper-Fast | 194 commits | 38 commits | lzpls, Calvin1-tech |
+| lumine-for-android | 52 commits | 11 commits | UjuiUjuMandan, lzpls, coolapijust |
+| lumine-for-harmonyos | 10 commits | -- | -- |
+
+---
+
+## Technology Stack
+
+- **Go** -- Core proxy and networking applications (SniShaper, SniShaper-Fast, lumine-for-android)
+- **C++** -- Platform-specific native implementations (lumine-for-harmonyos, AppDataCleaner)
+- **TypeScript** -- Web presence and tooling (SniShaperWeb)
+- **HTML** -- Documentation and static sites
+
+---
+
+## Contact
+
+- Website: [jetcpp.ccwu.cc](https://jetcpp.ccwu.cc)
+
+---
+
+SnishaperTeam -- Build freely, combine flexibly.
