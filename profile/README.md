@@ -37,6 +37,14 @@ Topics: cdn, cloudflare, domain-fronting, dpi, dpi-bypass, ech, gfw, golang, mit
 | [SniShaper-Fast](https://github.com/SnishaperTeam/SniShaper-Fast) | Go | Lightweight proxy tool with passthrough, domain fronting, ECH, TLS fragmentation, QUIC direct, and dynamic reverse relay -- the full-featured direct-connection platform |
 | [SniShaperWeb](https://github.com/dongzheyu/SniShaperWeb) | TypeScript | Official project website |
 
+### FlowWeaver
+
+The development repository where SniShaper's next generation takes shape. FlowWeaver is a full-featured local proxy client and gateway built around Clash subscription support: it parses subscription links, manages proxy groups and rules, and tunnels traffic through multi-protocol nodes including Shadowsocks (AEAD), VMess, VLESS, Trojan, TUIC, Hysteria2, WireGuard, SOCKS5 and HTTP, with UDP relay and TUN virtual adapter integration. Its features are folded back into the SniShaper desktop releases.
+
+| Repository | Language | Description |
+|------------|----------|-------------|
+| [FlowWeaver](https://github.com/SnishaperTeam/FlowWeaver) | Go | Full-featured local proxy client and gateway: Clash subscription support, multi-protocol nodes, WireGuard tunnels, TUN virtual adapter |
+
 ### lumine
 
 Clash-style network proxy implementations across multiple platforms. lumine brings familiar Clash-style proxy functionality to mobile and embedded platforms, providing consistent user experience across ecosystems.
@@ -58,7 +66,7 @@ Clash-style network proxy implementations across multiple platforms. lumine brin
 
 ## Technology Stack
 
-- **Go** -- Core proxy and networking applications (SniShaper, SniShaper-Fast, lumine-for-android, server-side tooling)
+- **Go** -- Core proxy and networking applications (SniShaper, FlowWeaver, SniShaper-Fast, lumine-for-android, server-side tooling)
 - **C++** -- Platform-specific native implementations (lumine-for-harmonyos, system utilities)
 - **TypeScript** -- Web presence and frontend tooling (SniShaperWeb)
 - **ArkTS / ArkUI** -- HarmonyOS application development (lumine-for-harmonyos)
