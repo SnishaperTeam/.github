@@ -1,4 +1,4 @@
-# SnishaperTeam
+﻿# SnishaperTeam
 
 Building comprehensive, freely combinable software for flexible network traffic manipulation.
 
@@ -21,23 +21,21 @@ A desktop application supporting multiple methods to bypass SNI blocking, design
 <div align="center">
 <table>
 <tr>
-<td width="33%">
+<td width="50%">
 
-[![SniShaper](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=SniShaper)](https://github.com/SnishaperTeam/SniShaper)
-
-</td>
-<td width="33%">
-
-[![SniShaper-Fast](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=SniShaper-Fast)](https://github.com/SnishaperTeam/SniShaper-Fast)
+[![SniShaper](https://githubcard.com/SnishaperTeam/SniShaper.svg)](https://githubcard.com/SnishaperTeam/SniShaper/card?utm_source=github&utm_medium=readme)
 
 </td>
-<td width="33%">
+<td width="50%">
 
-[![Snishaper-Droid](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=Snishaper-Droid)](https://github.com/SnishaperTeam/Snishaper-Droid)
+[![Snishaper-Droid](https://githubcard.com/SnishaperTeam/Snishaper-Droid.svg)](https://githubcard.com/SnishaperTeam/Snishaper-Droid/card?utm_source=github&utm_medium=readme)
 
 </td>
 </tr>
 </table>
+
+**[SniShaper-Fast](https://github.com/SnishaperTeam/SniShaper-Fast)** — private repository, team members only
+
 </div>
 
 ## FlowWeaver & snishaper-core
@@ -49,12 +47,12 @@ A desktop application supporting multiple methods to bypass SNI blocking, design
 <tr>
 <td width="50%">
 
-[![FlowWeaver](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=FlowWeaver)](https://github.com/SnishaperTeam/FlowWeaver)
+[![FlowWeaver](https://githubcard.com/SnishaperTeam/FlowWeaver.svg)](https://githubcard.com/SnishaperTeam/FlowWeaver/card?utm_source=github&utm_medium=readme)
 
 </td>
 <td width="50%">
 
-[![snishaper-core](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=snishaper-core&show_owner=true)](https://github.com/SnishaperTeam/snishaper-core)
+[![snishaper-core](https://githubcard.com/SnishaperTeam/snishaper-core.svg)](https://githubcard.com/SnishaperTeam/snishaper-core/card?utm_source=github&utm_medium=readme)
 
 </td>
 </tr>
@@ -70,12 +68,12 @@ Clash-style network proxy implementations across multiple platforms, bringing fa
 <tr>
 <td width="50%">
 
-[![lumine-for-harmonyos](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=lumine-for-harmonyos)](https://github.com/SnishaperTeam/lumine-for-harmonyos)
+[![lumine-for-harmonyos](https://githubcard.com/SnishaperTeam/lumine-for-harmonyos.svg)](https://githubcard.com/SnishaperTeam/lumine-for-harmonyos/card?utm_source=github&utm_medium=readme)
 
 </td>
 <td width="50%">
 
-[![lumine-for-android](https://github-readme-stats.vercel.app/api/pin/?username=SnishaperTeam&repo=lumine-for-android)](https://github.com/SnishaperTeam/lumine-for-android)
+[![lumine-for-android](https://githubcard.com/SnishaperTeam/lumine-for-android.svg)](https://githubcard.com/SnishaperTeam/lumine-for-android/card?utm_source=github&utm_medium=readme)
 
 </td>
 </tr>
@@ -89,17 +87,17 @@ Clash-style network proxy implementations across multiple platforms, bringing fa
 <tr>
 <td width="33%">
 
-[![sniproxy-tls-rf](https://github-readme-stats.vercel.app/api/pin/?username=Snishaper&repo=sniproxy-tls-rf&show_owner=true)](https://github.com/Snishaper/sniproxy-tls-rf)
+[![sniproxy-tls-rf](https://githubcard.com/Snishaper/sniproxy-tls-rf.svg)](https://githubcard.com/Snishaper/sniproxy-tls-rf/card?utm_source=github&utm_medium=readme)
 
 </td>
 <td width="33%">
 
-[![blindtls-vercel](https://github-readme-stats.vercel.app/api/pin/?username=Snishaper&repo=blindtls-vercel&show_owner=true)](https://github.com/Snishaper/blindtls-vercel)
+[![blindtls-vercel](https://githubcard.com/Snishaper/blindtls-vercel.svg)](https://githubcard.com/Snishaper/blindtls-vercel/card?utm_source=github&utm_medium=readme)
 
 </td>
 <td width="33%">
 
-[![Optidown](https://github-readme-stats.vercel.app/api/pin/?username=Snishaper&repo=Optidown&show_owner=true)](https://github.com/Snishaper/Optidown)
+[![Optidown](https://githubcard.com/Snishaper/Optidown.svg)](https://githubcard.com/Snishaper/Optidown/card?utm_source=github&utm_medium=readme)
 
 </td>
 </tr>
